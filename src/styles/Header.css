@@ -1,0 +1,99 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.menu-icon {
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 24px;
+  color: #f97316;
+}
+
+.open-finance {
+  font-size: 14px;
+  color: #333;
+  margin-left: 5px;
+}
+
+.header-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: #f97316;
+}
+
+.header-right {
+  font-size: 16px;
+  color: #333;
+}
+
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.1);
+  padding-top: 60px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.side-menu.open {
+  left: 0;
+}
+
+.side-menu-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 20px;
+}
+
+.side-menu-link {
+  text-decoration: none;
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+}
+
+.side-menu-link:hover {
+  color: #f97316;
+}
+
+
+@media (min-width: 768px) {
+  .side-menu {
+    display: none;
+  }
+}

@@ -1,19 +1,22 @@
 import React, { useState } from 'react';
-import '../styles/Home.css';
+import { useUserContext } from '../store/UserContext';
 import { useNavigate } from 'react-router-dom';
+import '../styles/Home.css';
 
 const Home: React.FC = () => {
   const [name, setName] = useState('');
+  const { setUserName } = useUserContext();
   const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (name.trim()) {
-       navigate('/clients'); 
+      setUserName(name);
+      navigate('/clients');
     }
   };
 
-   return (
+  return (
     <div className="home-container">
       <div className="home-content">
         <h1>Olá, seja bem-vindo!</h1>

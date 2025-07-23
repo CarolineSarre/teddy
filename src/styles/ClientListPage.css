@@ -1,0 +1,17 @@
+.client-list-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.client-list-page h1 {
+  font-size: 32px;
+  color: var(--primary-color);
+}
+
+.loading {
+  font-size: 18px;
+  color: #888;
+}
